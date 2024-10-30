@@ -1,0 +1,40 @@
+<div class="wrap">
+ <h2><?php echo __('Mietkaution-Spende Konfiguration')?></h2>
+ <form action="" method="post" style="margin: auto; width:400px;">
+ <?php
+ if ($this->success != "") {
+     ?>
+ <div style="background-color:#EFFFEF; color: #7CB51A; border-color: #7DB51C;">
+  <p style="padding:5px; font-weight:bold;">
+   <?php echo $this->success?>
+  </p>
+ </div>
+     <?php
+ }
+ ?>
+ <?php 
+ 
+ ?>
+  <p>
+   Dieses Widget zeigt einen kurzen Informationstext sowie zwei externe Links in
+   dem von Ihnen festgelegten Bereich an.
+  </p>
+  <p>
+   Zusätzlich können Sie, fals gewünscht den aktuellen Spendenstand einblenden lassen.
+  </p>
+  <h3><?php echo __('Zustimmung')?></h3>
+   <input type="checkbox" name="accept" value="1" id="accept" <?php if ($this->_accept) echo ' checked="checked" '?>/>
+   <label for="accept">
+    <?php echo __('Ich bin damit einverstanden, dass die externen Links auf der öffentlichen Seite angezeigt werden.')?>
+   </label>
+   <br />
+   <br />
+   <input type="checkbox" name="counter" value="1" id="counter" <?php if ($this->_counter) echo ' checked="checked" '?>/>
+   <label for="counter">
+    <?php echo __('Der Spendenstand soll mit angezeigt werden.')?>
+   </label>
+  <br />
+  <br />
+  <input type="submit" name="save" value="<?php echo __('Speichern')?>" />
+ </form>
+</div>
